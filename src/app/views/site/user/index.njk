@@ -1,0 +1,50 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+  <section class="user-login container form">
+
+    <form id="form-submit" method="POST" action="/user/login">
+
+      <header class="header">
+        <img src="/assets/logo.png" alt="Logo">
+        <h1>Iniciar Sessão</h1>
+      </header>
+
+      <div class="fields">
+
+        <div class="item">
+          <h3>Email</h3>
+          <input 
+            type="text" 
+            name="email"
+            placeholder="Digite seu email"
+            onblur="Validate.apply(this, 'isEmail')"
+          >
+        </div>
+
+        <div class="item">
+          <h3>Senha</h3>
+          <input 
+            type="password"
+            name="password" 
+            placeholder="Digite sua senha"
+          >
+        </div>
+
+        <div class="submit">
+          <a href="/user/forgot-password">Perdeu a senha?</a>
+          <button class="button" type="submit" form="form-submit">Acessar</button>
+        </div>
+
+      </div>
+    </form>
+  </section>
+{% endblock %}
+
+{% block footer %}
+{% endblock footer %}
+

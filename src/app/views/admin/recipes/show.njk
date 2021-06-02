@@ -1,0 +1,82 @@
+{% extends "admin-layout.njk" %}
+
+{% block content %}
+
+<div class="title-header">
+    <h1>Receita: {{ recipe.title }}</h1>
+    <div>
+       <a href="/admin/recipes/{{ recipe.id }}/edit" class="button">Editar receita</a>
+    </div>
+</div>
+
+<div class="recipe-content">
+    <div class="gallery">
+
+        <div class="highlight">
+        {% if not files[0] %}
+            <img src="http://placehold.it/500x500?text=PRODUTO SEM FOTO" />
+            
+        {% else %}
+            <img 
+                src="{{ files[0].src }}" 
+                alt="{{ files[0].name }}"
+            >
+        {% endif %}
+
+        </div>
+        <div class="gallery-preview">
+            {% for image in files %}
+                <img 
+                    src="{{ image.src }}" 
+                    alt="{{ image.name }}"
+                    {% if loop.index0 == 0 %}
+                        class="active"
+                    {% endif %}
+                    onclick="ImageGallery.setImage(event)"
+                >
+            {% endfor %}
+        </div>
+    </div>
+
+    <section>
+        <h1>{{ recipe.title }}</h1>
+        <p>por {{ recipe.chef_name }}</p>
+    </section>
+
+    <div class="spoiler">
+    <section class="spoiler-title">
+        <h3>Igredientes</h3>
+    </section>
+
+    <section class="spoiler-content">
+        <ul>
+            {% for ingredient in recipe.ingredients %}
+            <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    </div>
+    
+    <div class="spoiler">
+    <section class="spoiler-title">
+        <h3>Modo de preparo</h3>
+    </section>
+
+    <section class="spoiler-content">
+        {% for item in recipe.preparation %}
+        <p>{{ item }}</p>
+        {% endfor %}
+    </section>
+    </div>
+
+    <div class="spoiler">
+    <section class="spoiler-title">
+        <h3>Informações adicionais</h3>
+    </section>
+    <section class="spoiler-content">
+        <p>{{ recipe.information }}</p>
+    </section>
+    </div>
+</div>
+
+{% endblock %}

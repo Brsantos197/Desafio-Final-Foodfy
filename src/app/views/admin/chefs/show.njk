@@ -1,0 +1,30 @@
+{% extends "admin-layout.njk" %}
+
+{% import "parts/recipes-cards.njk" as cards %}
+
+
+{% block content %}
+
+<div class="title-header">
+    <h1>Chef: {{ chef.name }}</h1>
+    <div>
+       <a href="/admin/chefs/{{ chef.id }}/edit" class="button">Editar chef</a>
+    </div>
+</div>
+
+<div class="chef-content">
+    <img class="chef-avatar" src="{{ file.src }}" alt="">
+    <section>
+        <h1>{{ chef.name }}</h1>
+        <p>{{ chef.total_recipes }} receitas</p>
+    </section>
+
+{% if chef.total_recipes >= 1 %}
+<section>
+    <h3>Receitas</h3>
+    {{ cards.recipes(recipes) }}
+</section>
+{% endif %}
+</div>
+
+{% endblock %}

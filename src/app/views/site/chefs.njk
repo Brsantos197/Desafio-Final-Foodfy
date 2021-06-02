@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="chef-list">
+    <div class="cards">
+    {% for chef in chefs %}
+    <div class="card chefs-cards" id="{{chef.id}}">
+        <img src="{{ chef.img }}" alt="{{ chef.name }}">
+        <div>
+            <h3>{{ chef.name }}</h3>
+            <p> {{chef.total_recipes }} receitas</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'parts/styles.njk' %}
+    <title>Foodfy</title>
+</head>
+<body>
+
+    {% include 'parts/massages.njk' %}
+    <div class="content">
+    
+    {% block header %}
+    <header class="links">
+        <a href="/"><img src="/assets/logo.png" alt="logo"></a>
+        <div>
+            <a href="/home/sobre">Sobre</a>
+            <a href="/home/recipes">Receitas</a>
+            <a href="/home/chefs">Chefs</a>
+        </div>
+        <form action="/home/recipes" class="filter">
+            <input 
+                type="text" 
+                name="filter" 
+                placeholder="Buscar receitas"
+                value="{{ filter }}"
+                autofocus
+            >
+            <button type="submit">Buscar</button>
+        </form >
+        <a href="/user/login">Logar</a>
+    </header>
+    {% endblock header %}
+
+    {% block content %}
+
+    {% endblock %}
+    </div>
+    {% block footer %}
+        <div class="footer">
+        <p>Todos direitos reservados, receitas Foodfy</p>
+    </div>
+    {% endblock footer %}
+</body>
+
+
+<script src="/scripts.js">
+
+const cards = document.querySelectorAll('.card')
+
+    for (let card of cards) {
+    card.addEventListener("click", function() {
+        const recipeId = card.getAttribute("id")
+        window.location.href = `recipes/${recipeId}`
+    })
+}
+
+const chefCards = document.querySelector('.chefs-card')
+
+for (let card of chefCards) {
+    card.addEventListener("click", function() {
+        console.log('ok')
+    })
+}
+</script>
+
+</html>

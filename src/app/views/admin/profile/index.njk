@@ -1,0 +1,37 @@
+{% extends "admin-layout.njk" %}
+
+{% block content %}
+
+<div class="title-header">
+    <h1>Bem Vindo {{ user.name }}</h1>
+    <div>
+        <button type="submit" form="form-submit" >Salvar</button>
+    </div>
+</div>
+
+<form method="POST" action="/admin/profile?_method=PUT" id="form-submit">
+    <div class="user-fields">
+        {% include 'admin/profile/fields.njk' %}
+    </div>
+    <input type="hidden" name="id" value="{{ user.id }}">
+
+</form>
+<form id="form-delete" action="/admin/users?_method=DELETE" method="POST">
+    <input type="hidden" name="id" value="{{ user.id }}">
+</form>
+
+<script>
+
+    const formDelete = document.querySelector('#form-delete')
+    formDelete.addEventListener("submit", function(event) {
+        const confirmation = confirm("Desejar deletar?")
+        confirm("Desejar deletar?")
+        if (!confirmation) {
+            event.preventDefault()
+        }
+    })
+
+</script>
+
+{% endblock %}
+ 

@@ -1,0 +1,17 @@
+{% if error %}
+<div class="messages error">
+    <p>{{error}}</p>
+</div>
+{% endif %}
+
+{% if alert %}
+<div class="messages alert">
+    <p>{{alert}}</p>
+</div>
+{% endif %}
+
+{% if success %}
+<div class="messages success">
+    <p>{{success}}</p>
+</div>
+{% endif %}

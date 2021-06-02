@@ -1,0 +1,76 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="gallery">
+        <div class="highlight">
+            
+    {% if not files[0] %}
+            <img src="http://placehold.it/500x500?text=PRODUTO SEM FOTO" />
+        {% else %}
+            <img 
+                src="{{ files[0].src }}" 
+                alt="{{ files[0].name }}"
+            >
+        {% endif %}
+    <div class="gallery-preview">
+        {% for image in files %}
+            <img 
+                src="{{ image.src }}" 
+                alt="{{ image.name }}"
+                {% if loop.index0 == 0 %}
+                    class="active"
+                {% endif %}
+                onclick="ImageGallery.setImage(event)"
+            >
+        {% endfor %}
+    </div>
+</div>
+<div class="recipe-content">
+    
+<section>
+        <h1>{{ recipe.title }}</h1>
+        <p>por {{ recipe.chef_name }}</p>
+    </section>
+
+<div class="spoiler">
+<section class="spoiler-title">
+    <h3>Igredientes</h3>
+    <p class="spoiler-button" id="0">Esconder</p>
+</section>
+
+<section class="spoiler-content">
+    <ul>
+        {% for ingredient in recipe.ingredients %}
+        <li>{{ ingredient }}</li>
+        {% endfor %}
+    </ul>
+</section>
+</div>
+
+<div class="spoiler">
+<section class="spoiler-title">
+    <h3>Modo de preparo</h3>
+    <p class="spoiler-button" id="1">Mostrar</p>
+</section>
+
+<section class="spoiler-content">
+    {% for recipe in recipe.preparation %}
+    <p>{{ recipe }}</p>
+    {% endfor %}
+</section>
+</div>
+
+<div class="spoiler">
+    <section class="spoiler-title">
+        <h3>Informações adicionais</h3>
+        <p class="spoiler-button" id="2">Esconder</p>
+    </section>
+    <section class="spoiler-content">
+        <p>{{ recipe.information }}</p>
+    </section>
+    </div>
+</div>
+</div>
+
+{% endblock %}

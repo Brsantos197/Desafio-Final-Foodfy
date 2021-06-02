@@ -1,0 +1,39 @@
+{% extends "admin-layout.njk" %}
+
+{% block content %}
+
+<div class="title-header">
+    <h1>Usuários</h1>
+    <div>
+        <a href="/admin/users/create">Novo</a>
+    </div>
+</div>
+
+
+<div class="user-list">
+    <div class="cards">
+        {% for user in users %}
+        <div class="card" id="{{user.id}}">
+            <div>
+                <h3>{{ user.name }}</h3>
+                <p>{{ user.email }}</p>
+                <div>
+
+    
+                    <a href="/admin/users/{{ user.id }}/edit">Editar</a>
+                    {% if sessionUser.is_admin == true%}
+                        {% if user.is_admin != true %}
+                            <a href="/admin/users/{{ user.id }}/delete" class="remove" onclick="buttonDelete()" >Remover</a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+        <form id="form-delete" action="/admin/users?_method=DELETE" method="POST">
+        </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<div class="item">
+    <h3>Nome</h3>
+    <input 
+        type="text" 
+        name="name" 
+        value="{{ chef.name }}"
+    >
+</div>
+<!-- /.item -->
+
+<div class="item">
+    <h3>Avatar</h3>
+    {% if file %}
+        <input type="text" value="{{file.src}}">
+    {% endif %}
+    <div class="photo-container">
+        <div id="photo-upload">
+            <input type="file" name="photo" accept="image/*" id="photo-input" >
+            <p class="upload-button">Enviar Avatar</p class="upload-button">
+        </div>
+    </div>
+    <input type="hidden" name="removed_files">
+</div>
+<!-- /.item -->
+ 

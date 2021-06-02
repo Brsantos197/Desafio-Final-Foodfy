@@ -1,0 +1,39 @@
+{% extends "admin-layout.njk" %}
+
+{% block content %}
+
+<div class="title-header">
+    <h1>Criar Usuário</h1>
+    <div>
+        <button type="submit" form="form-submit" >Salvar</button>
+        <button type="submit" form="form-delete" class="cancel" >Cancelar</button>
+    </div>
+</div>
+
+<form method="POST" action="/admin/users" id="form-submit" >
+    <div class="user-fields">
+        {% include 'admin/users/fields.njk' %}
+        {{ error }}
+        
+    </div>
+
+</form>
+<form id="form-delete" action="/admin/users?_method=DELETE" method="POST">
+</form>
+
+<script>
+
+    const formDelete = document.querySelector('#form-delete')
+    formDelete.addEventListener("submit", function(event) {
+        const confirmation = confirm("Desejar deletar?")
+        confirm("Desejar deletar?")
+        if (!confirmation) {
+            event.preventDefault()
+        }
+    })
+
+</script>
+
+
+{% endblock %}
+ 

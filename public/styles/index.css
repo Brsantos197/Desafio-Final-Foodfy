@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.content,
+.admin-content {
+    margin: 0 230px;
+    min-height: calc(100vh - 70px);
+    width: 940px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 36.1px auto;
+    width: 100%;
+}
+
+.links a {
+    text-decoration: none;
+    color: #111111;
+    font-size: 16px;
+}
+
+.links a+a {
+    margin-left: 30px;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.chef {
+    width: 940px;
+    height: 366px;
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 248px;
+    align-items: center;
+}
+
+.chef div {
+    width: 316px;
+    margin-left: 60px;
+}
+
+.chef img {
+    margin-top: 66px;
+}
+
+.chef h1 {
+    color: #111111;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.chef p {
+    color: #000000;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 0.7;
+}
+
+.destaque {
+    margin-top: 50px;
+}
+
+.destaque h1 {
+    font-size: 24px;
+    color: #111111;
+}
+
+.cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card img {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.card h1 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #111111;
+}
+
+.card p {
+    font-size: 14px;
+    color: #777777;
+    margin-top: 5px;
+}
+
+.footer p {
+    font-family: Roboto-Regular;
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+    padding: 23px;
+}
+
+.footer {
+    margin-top: 71px;
+    width: 100%;
+    height: 62px;
+    background: #EEEEEE;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.sobre h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+.sobre h3 {
+    font-size: 20px;
+    color: #111111;
+    font-weight: bold;
+    margin: 20px 0 30px 0;
+}
+
+.sobre p {
+    color: #444444;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 660px;
+    height: 413px;
+    margin: 5vh auto;
+    position: relative;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.modal img {
+    width: 600px;
+    height: 200px;
+    margin: 30px 30px 20px 30px;
+    border-radius: 15px;
+}
+
+.modal h3 {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #111111;
+}
+
+.modal p {
+    font-size: 18px;
+    color: #777777;
+    margin-bottom: 60px;
+}
+
+.modal .close-modal {
+    font-size: 16px;
+    color: #999999;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.recipe-content section{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.recipe-content section h1 {
+    color: #111111;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.recipe-content section .spoiler-button {
+    margin: 12px 0 0 8px;
+    color:#777777;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.recipe-content h3 {
+    font-size: 24px;
+    color: #111111;
+}
+
+.spoiler-title {
+    margin-top: 78px;
+    display: inline-flex;
+}
+
+.spoiler-content {
+    text-align: left !important;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+.spoiler-content p, li {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.spoiler-content li {
+    margin-left: 16px;
+
+}
+
+li::marker{
+    color: #000000;
+}
+
+/* ADMIN */
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111111;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 55px;
+}
+
+.admin-header div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 231px;
+}
+
+.admin-header a,
+.admin-header form button {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #999999;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.admin-header form button {
+    background-color: #111111;
+    margin-right: 50px;
+}
+
+.admin-header a:first-of-type {
+    margin-left: 50px;
+}
+
+.admin-header a+a {
+    margin-left: 30px;
+}
+
+.admin-header a.active {
+    color: #FFFFFF;
+}
+
+.admin-header a:hover,
+.admin-header form button:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.admin-content h1 {
+    color: #111111;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.admin-content .title-header,
+.admin-content .cards,
+.admin-content .cards .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.admin-content .title-header {
+    width: 940px;
+}
+
+.admin-content .title-header div a:hover,
+.admin-content .title-header button[type="submit"]:hover,
+.filter button[type="submit"]:hover {
+    filter: brightness(0.8);
+}
+
+.admin-content .title-header div a,
+.admin-content .title-header button[type="submit"],
+.filter button[type="submit"] {
+    width: auto;
+    padding: 9px 50px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color: #6558C3;
+    border-radius: 4px;
+}
+
+.admin-content .title-header div a {
+    text-decoration: none;
+    position: relative;
+    top: 9px;
+}
+
+.admin-content .title-header div {
+    text-align: right;
+    
+}
+.admin-content .title-header button[type="submit"].form-delete {
+    background-color: #DC4747;
+    margin-right: 8px;
+}
+
+.admin-content .title-header button[type="submit"].cancel {
+    background-color: #8A8A8A;
+    margin-left: 8px;
+}
+.admin-content .cards .card {
+    height: 100px;
+}
+
+.admin-content .cards .card img {
+    width: 172px;
+    height: 80px;
+    border-radius: 8.57px;
+}
+
+.admin-content .cards .card a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #6558c3;
+}
+
+
+.admin-content .cards .card p {
+    margin-bottom: 10px;
+}
+
+.admin-content .recipe-content:last-child {
+    margin-bottom: 50px;
+}
+
+/* FORM */
+
+form .item {
+    display: grid;
+}
+
+form .item h3 {
+    font-size: 16px;
+    color: #111111;
+}
+
+form .item input,
+form .item textarea,
+form .item select  {
+    margin: 10px 0 15px 0;
+    width: 100%;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+form .item input[type=file] {
+    margin: 0;
+}
+
+form .item textarea {
+    width: 100%;
+    height: 260px;
+    margin-bottom: 50px;
+}
+
+form .item p {
+    text-decoration: none;
+    font-size: 16px;
+    color: #6558C3;
+    margin-bottom: 30px;
+}
+
+.add-ingredient,
+.add-step {
+    cursor: pointer;
+}
+
+/* CHEFS */
+
+.chef-content {
+    text-align: center;
+    height: 800px;
+}
+
+.chef-content .chef-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.chef-content h1 {
+    color: #111111;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.chef-content p {
+    color: #777777;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.chef-content h3 {
+    text-align: left;
+    color: #111111;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.chef-content a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #6558c3;
+}
+
+.chef-content .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+
+.chef-content .cards .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+}
+
+.chef-content .cards .card img {
+    width: 172px;
+    height: 80px;
+    border-radius: 8.57px;
+}
+
+.chef-content .cards .card h4 {
+    color: #111111;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.chef-content .cards .card p {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.chef-list .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.chef-list .cards .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.chef-list .cards .card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.chef-list .cards .card h3 {
+    color: #111111;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.chef-list .cards .card div {
+    width: 130px;
+}
+
+/* FILTER */
+
+.filter {
+    text-align: right;
+}
+
+.filter input {
+    padding-left: 8px;
+    width: 246px;
+    height: 37px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+/* PHOTOS UPLOAD */
+
+form .item .photos-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10.5px;
+    margin-bottom: 30.5px;
+}
+
+form .item #photos-upload {
+    position: relative;
+    display: block ;
+    overflow: hidden;
+
+    width: 200px;
+}
+
+form .item #photos-upload div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 150px;
+
+    background-color: white;
+    color: #777777;
+    
+    border: solid 1px #DDDDDD;
+    border-radius: 3.5px;
+
+    cursor: pointer;
+}
+
+form .item .photo-container #photo-container input#photos-input  {
+    margin: 0;
+}
+
+form .item input#photos-input  {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+form .item #photos-preview {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    width: 100%;
+}
+
+
+form .item #photos-preview img {
+    width: 100%;
+    height: 150px;
+
+    border-radius:  3.5px;
+
+    object-fit: cover;
+}
+
+#photos-preview .photo {
+    position: relative;
+
+}
+
+#photos-preview .photo i {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    color: red;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 500%;
+    cursor: pointer;
+    
+    transition: opacity 0.2s;
+    
+    opacity: 0;
+}
+
+#photos-preview .photo:hover i {
+    opacity: 1;
+}
+
+/* GALLERY */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.gallery .highlight img {
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+
+    object-fit: cover;
+}
+
+.gallery .gallery-preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.gallery .gallery-preview img {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 3.5px;
+
+    object-fit: cover;
+
+    opacity: 0.6;
+    cursor: pointer;
+
+    transition: 200ms;
+}
+
+.gallery .gallery-preview img + img {
+    margin-left: 10px;
+
+}
+
+.gallery .gallery-preview img:hover,
+.gallery .gallery-preview img.active {
+    opacity: 1;
+}
+
+/* PHOTO UPLOAD CHEF */
+
+form .item .photo-container {
+    position: relative;
+    width: 140px;
+    height: 40px;
+}
+
+form .item .photo-container p.upload-button {
+    background-color: #6558C3;
+    color: white;
+
+    padding: 8px 16px;
+    margin-top: 10px;
+
+    border-radius: 4px;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+form .item .photo-container p.upload-button:hover {
+    filter: brightness(0.8);
+
+}
+
+form .item .photo-container #photo-input  {
+    position: absolute;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Validate input */
+
+.user-login.container.form .fields .item input.inputError {
+    border: 1px solid #FF3131;
+    border-radius: 4px;
+}

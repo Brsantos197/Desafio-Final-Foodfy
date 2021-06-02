@@ -1,0 +1,18 @@
+{% extends "admin-layout.njk" %}
+
+{% import "parts/recipes-cards.njk" as cards %}
+
+
+{% block content %}
+
+<div class="title-header">
+    <h1>Gerenciar receitas</h1>
+    <div>
+        <a href="/admin/recipes/create">Criar receita</a>
+    </div>
+</div>
+
+    {{ cards.recipes(recipes) }}
+
+
+{% endblock %}

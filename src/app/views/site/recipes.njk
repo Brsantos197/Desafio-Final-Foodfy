@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+{% if filter %}
+    <h1>Buscando por "{{ filter }}"</h1>
+{% endif %}
+
+<div class="cards">
+    {% for item in recipes %}
+    <div class="card recipe-card" id="{{item.id}}">
+        <img src="{{ item.img }}" alt="{{ item.title }}">
+        <h3>{{ item.title }}</h3>
+        <p>por {{ item.chef_name }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

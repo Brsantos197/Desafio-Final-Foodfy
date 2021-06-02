@@ -1,0 +1,69 @@
+/* user login */
+
+.user-login.container.form header {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.user-login.container.form h1 {
+    font-size: 24px;
+    color: #111111;
+    margin-top: 146px;
+}
+
+.user-login.container.form .fields {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-login.container.form .fields .item {
+    gap: 10px;
+}
+
+.user-login.container.form .fields .item h3 {
+    
+    font-size: 16px;
+    color: #111111;
+}
+
+.user-login.container.form .fields .item input {
+    color: #999999;
+    padding: 8px 16px;
+    width: 500px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+.user-login.container.form .fields div.submit {
+    width: 500px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-login.container.form .fields div.submit a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #969696;
+}
+
+.user-login.container.form .fields div.recover {
+    display: flex;
+    width: 500px;
+    justify-content: flex-end;
+}
+
+.user-login.container.form .fields div.recover button {
+    width: 134px;
+    height: 37px;
+    padding: 9px 20px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color: #6558C3;
+    border-radius: 4px;
+}

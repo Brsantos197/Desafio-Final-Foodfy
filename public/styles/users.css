@@ -1,0 +1,62 @@
+.user-list .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.user-list h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #111111;
+}
+
+.user-list .cards .card div p {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 15px;
+}
+
+.user-list .cards .card div a {
+    color: #6558C3;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.user-list .cards .card div a.remove {
+    color: #F55A5A;
+}
+
+.user-list .cards .card div a + a {
+    margin-left: 16px;
+}
+
+/* fields */
+
+.user-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 23px;
+}
+
+.user-fields input {
+    padding: 8px 16px;
+    color: #111111;
+    font-size: 16px;
+}
+
+.user-fields input[type="checkbox"] {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+.user-fields label {
+    margin-left: 8px;
+    font-size: 16;
+    font-weight: bold;
+    color: #111111;
+}
+
+.cancel {
+    color: #111111;
+}
