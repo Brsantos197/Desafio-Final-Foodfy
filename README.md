@@ -38,6 +38,7 @@ Após escolher uma das opções, esteja ciente de que o projeto deve ter sido ba
 Digite no console do ambiente:
 
 npm install
+
 Isso irá instalar todas as dependências utilizadas no projeto de maneira automática.
 
 Há um arquivo incluso no projeto "database.pgsql" que contém todas as informações de como foi criado o Banco de Dados do projeto, e para que o mesmo funcione, você deve criar a database, as tables e procedures utilizadas, portanto, rode os códigos pgsql deste arquivo.
