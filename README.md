@@ -7,7 +7,8 @@ Desafio final do curso LaunchBase da Rocketseat
 Aplicação Web que foi desenvolvida ao longo do Bootcamp Launchstore da Rocketseat. 
 Consiste em criar um sistema capaz de registrar usuários para que possam registrar suas receitas com os demais usuários/chefs que participarem da comunidade da Aplicação.
 
-👨🏼‍💻 Tecnologia
+👨🏼‍💻 Tecnologias
+
 O projeto foi construído com as seguintes tecnologias:
 
 HTML5;
@@ -23,6 +24,7 @@ Nodemon;
 Nunjucks.
 
 🚀 Configurando
+
 Para que o projeto seja utilizado, deve-se seguir alguns passos para configurá-lo corretamente:
 
 1º Primeiro passo:
@@ -53,9 +55,11 @@ Mude as credencias do Banco de Dados para as configuradas em seu computador, iss
 O projeto conta com um sistema simples de envio de E-mail, usando o mailtrap, portanto, também lembre-se de configurar o mesmo com o usuário e senha que poderá ser gerado automaticamente no site do mailtrap ao criar um inbox e na SMTP Settings mudar a integração para o nodemailer.
 
 🌱 Seeding
+
 Há também um arquivo configurado como seeder do projeto, você pode utilizar o "seed.js" para preencher as tabelas com informações padrãos do projeto que esta no documento "data.json", parte das informações são geradas de forma aleatória com a biblioteca "faker",para utilizar o seed.js escreva no console:
 
 node seeds.js
+
 Na raíz do projeto para que o seeder preencha as tabelas.
 
 E por último, para rodar o projeto digite:
