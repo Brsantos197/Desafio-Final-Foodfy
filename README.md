@@ -29,7 +29,7 @@ Para que o projeto seja utilizado, deve-se seguir alguns passos para configurá-
 
 baixe a aplicação ou, utilizando o código de versionamento (git), clone o mesmo:
 
-git clone https://github.com/eric-zanchettin/foodfy.git
+git clone https://github.com/Brsantos197/Desafio-Final-Foodfy.git
 Após escolher uma das opções, esteja ciente de que o projeto deve ter sido baixado/clonado em um ambiente de desenvolvimento que esteja pronto para uso com node.js
 
 2º Segundo passo:
