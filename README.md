@@ -12,16 +12,24 @@ Consiste em criar um sistema capaz de registrar usuários para que possam regist
 O projeto foi construído com as seguintes tecnologias:
 
 HTML5;
+
 CSS3;
+
 JavaScript;
+
 Node.js;
+
 PostgreSQL.
+
 
 Com ajuda das seguintes bibliotecas/frameworks:
 
 Express.js;
+
 Nodemon;
+
 Nunjucks.
+
 
 🚀 Configurando
 
